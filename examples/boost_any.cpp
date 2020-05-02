@@ -38,6 +38,8 @@ void example() {
     // will return an NULL pointer.
     std::string* s2 = boost::any_cast<std::string>(&variable);
 
+    std::cout << *s2 << std::endl;
+
 
     (void)s2; // Supressing warnings about unused variable
     (void)s1;
