@@ -31,9 +31,13 @@ if(Boost_FOUND)
         add_executable(multiprecision examples/multiprecision.cpp)
         #target_link_libraries(multiprecision ${Boost_LIBRARIES})
 
-
         add_executable(program_option_fruit examples/program_option_fruit.cpp)
         target_link_libraries(program_option_fruit ${Boost_LIBRARIES})
+
+        add_executable(program_option_advance examples/program_option_advance.cpp)
+        target_link_libraries(program_option_advance ${Boost_LIBRARIES})
+        file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/examples/apples_oranges.cfg
+            DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/)
 
     endif()
 endif()
