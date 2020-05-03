@@ -43,5 +43,7 @@ if(Boost_FOUND)
 
         add_executable(boost_any examples/boost_any.cpp) #header only
 
+        add_executable(variant examples/variant_example.cpp) #header only
+
     endif()
 endif()
