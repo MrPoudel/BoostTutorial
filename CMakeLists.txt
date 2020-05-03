@@ -47,5 +47,9 @@ if(Boost_FOUND)
 
         add_executable(variant_advanced examples/variant_advanced.cpp) #header only
 
+        add_executable(return_array examples/return_array.cpp) #header only
+
+        add_executable(boost_tuple examples/boost_tuple.cpp) #header only
+
     endif()
 endif()
