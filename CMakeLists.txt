@@ -51,5 +51,7 @@ if(Boost_FOUND)
 
         add_executable(boost_tuple examples/boost_tuple.cpp) #header only
 
+        add_executable(tuple_advance examples/tuple_advance.cpp) #header only
+
     endif()
 endif()
