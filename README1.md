@@ -95,3 +95,27 @@ int main() {
 }
 ```
 
+## 5. Generic lambda
+- C++14  have generic/polymorphic lambda
+- auto is allowed in the function return type.
+
+```
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+int main() {
+
+	auto add = [](auto x, auto y) { return x+y; };
+
+	int a = 1, b = 2;
+	std::string str1 = "CppNuts", str2 = "Rupesh";
+
+	cout << add(a,b) << endl;
+	cout << add(str1, str2) << endl;
+
+	return 0;
+}
+```
+
