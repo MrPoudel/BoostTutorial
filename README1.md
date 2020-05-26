@@ -17,7 +17,7 @@ int main() {
 
 ```
 
-2. Binary literals
+## 2. Binary literals
 - GCC compiler had this feature but not standardized, now C++14 have standardized it.
 ```
 #include <iostream>
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-3. Depricated attribute/ keyword
+## 3. Depricated attribute/ keyword
 - Attributes are allowed to use but discouraged for some reasons
 - Compiler gives warning and if string literals are provided they are included in warnings ( explainning the reason)
 
@@ -71,4 +71,27 @@ enumerator
 template specialization
 ```
 
+## 4. Variable template
+- Before C++14 we had function template and cass template, now we have variable template.
+
+```
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+template <typename T>
+T pi = T(3.1415926535897932384626433L);
+
+int main() {
+
+	cout.precision(std::numeric_limits<long double>::max_digits10);
+	std::cout << pi<int> << endl;
+	std::cout << pi<float> << endl;
+	std::cout << pi<double> << endl;
+	std::cout << pi<long double> << endl;
+
+	return 0;
+}
+```
 
