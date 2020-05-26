@@ -119,3 +119,44 @@ int main() {
 }
 ```
 
+## 6. Return Type Deduction
+- Using an auto return type in C++14, the compiler will attempt to deduce the type for you.
+a. auto 
+b. decltype(auto)
+
+- decltype(auto) is used if we want to use reference, const, volatile etc. 
+  Examples:
+  
+//  const int x = 0;
+//  auto x1 = x; // int
+//  decltype(auto) x2 = x; // const int
+//  int y = 0
+//  int& y1 = y;
+//  auto y2 = y1; // int
+//  decltype(auto) y3 = y1 //int&
+
+```
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+// Example 1
+auto add(int a , int b) { return a+b; }
+
+// example 2
+decltype(auto) increment(int& a) { a++; return a; }
+//auto& increment(int& a) { a++; return a; }
+
+int main() {
+
+	int x = 5;
+
+	int& y = increment(x);
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+
