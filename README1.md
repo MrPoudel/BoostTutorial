@@ -1,4 +1,4 @@
-# BoostTutorial
+# About C++ standard
 # C++14 features
 
 1. Digit separator
