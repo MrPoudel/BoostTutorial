@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-## 3. Depricated attribute/ keyword
+## 3. Deprecated attribute/ keyword
 - Attributes are allowed to use but discouraged for some reasons
 - Compiler gives warning and if string literals are provided they are included in warnings ( explainning the reason)
 
